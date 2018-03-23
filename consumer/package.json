@@ -1,5 +1,5 @@
 {
-  "name": "producer",
+  "name": "consumer",
   "version": "0.1.0",
   "description": "",
   "scripts": {
