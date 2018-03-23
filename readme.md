@@ -2,6 +2,7 @@ Could perhaps be used as proof of concept for a "pull based" system. Even though
 
 Some features:
 
+* single solution for message passing. this is perhaps just lazy but I like to not have to care about framing, BOMs, multibyte chars etc..
 * system is decoupled. producers and consumers do not _have_ to know about each other, just agree on a queue name. I know this is stringly typed but in any system we need ip/port that's stringly typed anyways.
 * modules of the system are testable in isolation, with only rabbitmq (+ docker) as dependency.
 * state is persistent with the rabbitmq instance instead of with the producer (even though it's still in-memory). Keeps some consistency if e.g. someone writes a system that crashes all the time. This way consumers still have a defined "desired state" even when a producer is unresponsive.
